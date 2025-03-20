@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trevor Moore's Portfolio</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Trevor Moore</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#resume">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <img src="./assets/images/trevor.jpg" alt="Developer's Avatar leaning against the hood of a car">
+            <p>Hi my name is Aaron Trevor Moore, but my preferred name is Trevor. I am 31 years old, and I was born and raised in Dallas, Texas. I have two kids my oldest is 2 and my youngest is 4 weeks old. I have never done software development, but I really want to learn how to do this professionally.</p>
+        </section>
+        <section id="portfolio">
+            <h2>My Work</h2>
+            <div class="portfolio">
+                <div class="portfolio-item">
+                    <a href="https://your-github-username.github.io/your-repo-name">
+                        <div class="background-image featured" style="background-image: url('./assets/images/app1.jpg');"></div>
+                    </a>
+                    <h3>Application 1</h3>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://deployed-app2.com">
+                        <div class="background-image" style="background-image: url('./assets/images/app2.jpg');"></div>
+                    </a>
+                    <h3>Application 2</h3>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://deployed-app3.com">
+                        <div class="background-image" style="background-image: url('./assets/images/app3.jpg');"></div>
+                    </a>
+                    <h3>Application 3</h3>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://deployed-app4.com">
+                        <div class="background-image" style="background-image: url('./assets/images/app4.jpg');"></div>
+                    </a>
+                    <h3>Application 4</h3>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://deployed-app5.com">
+                        <div class="background-image" style="background-image: url('./assets/images/app5.jpg');"></div>
+                    </a>
+                    <h3>Application 5</h3>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        <section id="resume">
+            <h2>Resume</h2>
+            <a href="resume.pdf" download>Download My Resume</a>
+        </section>
+    </main>
+    <footer>
+        <a href="https://github.com/developer">GitHub</a>
+        <a href="https://linkedin.com/in/developer">LinkedIn</a>
+        <a href="https://stackoverflow.com/users/developer">Stack Overflow</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
