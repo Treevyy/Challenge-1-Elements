@@ -9,6 +9,7 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   
+  /* HEADER */
   header {
     padding: 20px;
     background-color: #2a607c;
@@ -41,8 +42,10 @@
     font-size: 20px;
   }
   
+  /* HERO SECTION */
   .hero {
-    height: 800px;
+    /* Remove fixed height so the background scales automatically */
+    min-height: 400px; 
     width: 100%;
     margin-bottom: 25px;
     background-image: url("https://static.bc-edx.com/coding/full-stack/01-HTML-Git-CSS/assets/digital-marketing-meeting.jpg");
@@ -50,34 +53,46 @@
     background-position: center;
   }
   
-  main {
-    width: 75%;
-    margin-left: 20px;
+  /* FLEX CONTAINER FOR MAIN + ASIDE */
+  .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 20px; /* Adds some side spacing so content isn't edge-to-edge */
   }
   
+  main {
+    flex: 2; /* Make main content take about twice as much width as aside */
+  }
+  
+  /* Remove float and width from aside to let flex handle it */
+  aside.benefits {
+    flex: 1;
+    background-color: #2589bd;
+    color: #ffffff;
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  /* MAIN CONTENT SECTIONS */
   .content-section {
+    /* Remove fixed height so the section resizes to fit content */
     margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
+    padding: 20px;
     background-color: #0072bb;
     color: #ffffff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
-  .content-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-main {
-    flex: 2;
-}
-
-aside.benefits {
-    flex: 1;
-}
-
+  /* IMAGES INSIDE CONTENT SECTIONS */
+  .content-section img {
+    /* Let the image shrink or grow while keeping aspect ratio */
+    max-width: 40%; 
+    height: auto;
+    /* If you want them on the left or right, you can keep these floats */
+  }
+  
+  /* OPTIONAL float classes (if you want text to wrap around images) */
   .float-left {
     float: left;
     margin-right: 25px;
@@ -88,37 +103,22 @@ aside.benefits {
     margin-left: 25px;
   }
   
-  .content-section img {
-    height: 200px;
-    width: auto;
-  }
-  
-  .benefits {
-    margin-right: 20px;
-    padding: 20px;
-    float: right;
-    width: 20%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #2589bd;
-    color: #ffffff;
-    clear: both;
-  }
-  
+  /* BENEFITS ARTICLES */
   .benefits article {
     margin-bottom: 32px;
     text-align: center;
   }
   
   .benefits img {
-    height: 150px;
-    width: auto;
+    max-width: 100px; /* or however large you want them */
+    height: auto;
     display: block;
     margin: 10px auto;
   }
   
+  /* FOOTER */
   footer {
     padding: 30px;
-    clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     background-color: #2a607c;
